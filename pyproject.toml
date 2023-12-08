@@ -9,29 +9,29 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "serial_packets"
-version = "0.2.1"
+name = "pyBusPirateLite"
+version = "0.1.0"
 authors = [
   { name="Zapta", email="zapta@zapta.com" },
 ]
-description = "A Python impelementation of the Serial Packets protocol"
+description = "A Python driver for Bus Pirate"
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    # "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "License :: GNU General Public License v3 (GPLv3) (GPL-3.0-only)",
     "Operating System :: OS Independent",
 ]
 
 dependencies = [
-    "pyserial-asyncio >=0.6.0",
-    "pythoncrc >=1.21.0",
+    "serial >=0.0.97",
 ]
 
 [tool.hatch.build.targets.sdist]
 include = [
   "LICENSE",
-  "/src/serial_packets",
+  "/src/pyBusPirateLite",
 ]
 # NOTE: root .gitignore can't be excluded per 
 # https://github.com/pypa/hatch/discussions/368
@@ -39,9 +39,10 @@ exclude = [
   ".gitignore",
   ".vscode",
   ".*.sh",
+  ".DS_Store",
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/zapta/serial_packets_py"
-"Bug Tracker" = "https://github.com/zapta/serial_packets_py/issues"
+"Homepage" = "https://github.com/zapta/pyBusPirateLite"
+"Bug Tracker" = "https://github.com/zapta/pyBusPirateLite/issues"
 
